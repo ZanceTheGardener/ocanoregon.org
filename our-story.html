@@ -204,6 +204,76 @@
   .foot-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.9rem; color: var(--white); line-height: 1; margin-bottom: 10px; }
   .foot-brand img { width: 42px; height: 42px; }
 
+  /* ===== V3 palette: light grey base, OCAN banner blue headings, charcoal accents =====
+     The campaign flyer at the top keeps its own blue and orange. */
+  :root {
+    --slate: #0168a4;      /* OCAN banner / logo blue */
+    --slate-dk: #1d447b;   /* deep slate (palette) */
+    --slate-md: #5b78aa;   /* slate blue (palette) */
+    --slate-lt: #adc3e8;   /* pale periwinkle (palette) */
+    --charcoal: #272b3e;   /* dark charcoal (palette) */
+    --grey: #f1f2f4;       /* light grey page background */
+    --grey-2: #e2e5ea;
+  }
+  body { background: var(--grey); color: var(--charcoal); }
+  a { color: var(--slate); }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline-color: var(--slate); }
+  h2, h3 { color: var(--slate); }
+  nav a:hover { background: var(--grey-2); }
+  .btn-orange { background: var(--charcoal); color: var(--white); }
+  .btn-orange:hover { background: #3a4058; }
+  .btn-royal { background: var(--slate); color: var(--white); }
+  .btn-royal:hover { background: #015585; }
+  .btn-line { border-color: var(--slate); color: var(--slate); }
+  .btn-line:hover { background: var(--grey-2); }
+  .poster-wrap { background: var(--grey); }
+
+  /* Flyer keeps blue + orange */
+  .hero-text .btn-orange { background: var(--orange); color: var(--royal); }
+  .hero-text .btn-orange:hover { background: var(--orange-dk); }
+  .give-box h3, .give-box .raised { color: var(--royal); }
+  .give-box .alt { color: var(--royal-2); }
+
+  /* Everyday hero after the campaign: new palette */
+  #top.is-general .poster { box-shadow: 0 0 0 2px var(--slate-dk), 0 18px 48px rgba(29, 68, 123, .25); }
+  #top.is-general .hero-art { background: linear-gradient(180deg, #ffffff 0%, var(--grey) 25%, var(--slate-lt) 70%, var(--slate-md) 100%); }
+  #top.is-general .hero-text { background: linear-gradient(180deg, var(--slate-md) 0px, #2f5f97 70px, var(--slate-dk) 55%, #16365f 100%); }
+  #top.is-general .match { color: var(--slate-lt); }
+  #top.is-general .btn-orange { background: var(--charcoal); color: var(--white); }
+  #top.is-general .give-box h3 { color: var(--slate); }
+  #top.is-general .give-box .alt { color: var(--slate); }
+
+  /* Mission */
+  .reach div { border-top-color: var(--charcoal); }
+  .reach b { color: var(--slate); }
+  .reach span, .photo figcaption { color: #4f5568; }
+  .areas li { background: var(--white); color: var(--slate); border: 1.5px solid var(--grey-2); }
+
+  /* Donate band */
+  .deep { background: var(--slate-dk); }
+  .deep h2, .deep h3 { color: var(--white); }
+  .deep .btn-orange { background: var(--white); color: var(--charcoal); }
+  .deep .btn-orange:hover { background: var(--grey-2); }
+  .tier .amt { color: var(--slate-lt); }
+  .tier[aria-pressed="true"] .amt { color: var(--slate); }
+  .deep .fine, .need p { color: #d3ddef; }
+  .check-card h3, .check-card address { color: var(--slate); }
+  .check-card .fine { color: #4f5568; }
+
+  /* Get involved */
+  .soft { background: var(--white); }
+  .help-list li { border-bottom-color: var(--grey-2); }
+  .help-list li::before { background: var(--charcoal); }
+  .card-royal { background: var(--charcoal); }
+  .card-royal h3 { color: var(--white); }
+  .card-royal p { color: #d0d4de; }
+  .card-royal .btn-orange { background: var(--white); color: var(--charcoal); }
+  .card-white { background: var(--grey); border: 1.5px solid var(--grey-2); }
+
+  /* Stay connected + footer */
+  .connect-item { border-color: var(--grey-2); border-top-color: var(--slate); }
+  footer { background: var(--charcoal); color: #c3c8d4; }
+
 
   /* ===== Our Story page ===== */
   .story-hero {
@@ -233,6 +303,16 @@
   .closing { text-align: center; }
   .closing .display { font-size: clamp(3rem, 9vw, 6.4rem); color: var(--orange); max-width: 14ch; margin: 0 auto .5em; line-height: .9; }
   .closing .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+  /* V3 palette for the story page */
+  .story-hero { background: linear-gradient(180deg, #ffffff 0%, var(--grey) 35%, var(--slate-lt) 100%); }
+  .story-hero h1 { color: var(--slate); }
+  .story-hero .lede { background: var(--slate-dk); }
+  nav a[aria-current="page"] { color: var(--slate); }
+  .stats li { border-top-color: var(--charcoal); }
+  .stats b { color: var(--slate); }
+  .stats span { color: #4f5568; }
+  .closing .display { color: var(--white); }
 </style>
 </head>
 <body>
