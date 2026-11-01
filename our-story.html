@@ -300,6 +300,16 @@
   }
   @media (max-width: 419px) { .header-donate { padding: 9px 14px; font-size: .9rem; } }
 
+  /* Campaign art with live progress ring */
+  .art-stack { position: relative; width: min(500px, 86vw); margin: 0 auto; }
+  .hero-art .art-stack img { display: block; width: 100%; height: auto; -webkit-mask-image: none; mask-image: none; }
+  .ring { position: absolute; left: 50%; top: 44.48%; width: 34%; transform: translate(-50%, -50%); overflow: visible; }
+  .ring text { font-family: "Bebas Neue", Impact, sans-serif; font-size: 25px; fill: #111; }
+  #camp-arc { transition: stroke-dasharray 1.4s cubic-bezier(.2,.7,.2,1); }
+  @media (prefers-reduced-motion: reduce) { #camp-arc { transition: none; } }
+  #top:not(.is-general) .general-only { display: none; }
+  #top.is-general .campaign-only { display: none; }
+
 
   /* ===== Our Story page ===== */
   .story-hero {
