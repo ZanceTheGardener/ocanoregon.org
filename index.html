@@ -554,7 +554,7 @@
   var CAMPAIGN = {
     name: "Eviction Prevention Match",
     goal: 12000,
-    raised: 5400,
+    raised: 6660,
     start: "2026-10-18",
     end: "2026-11-30",
     hideAfterDays: 14,
@@ -572,7 +572,7 @@
 
     var fmt = function (n) { return "$" + Math.round(n).toLocaleString("en-US"); };
     var pct = c.goal > 0 ? Math.min(100, c.raised / c.goal * 100) : 0;
-    var leftAmt = Math.max(0, c.goal - c.raised), leftRound = Math.round(leftAmt / 100) * 100;
+    var leftAmt = Math.max(0, c.goal - c.raised), leftRound = leftAmt;
     document.getElementById("camp-left-amt").textContent = fmt(leftRound > 0 ? leftRound : leftAmt);
     if (leftAmt <= 0) document.getElementById("camp-match").innerHTML = '<span class="ln">We reached our</span> <span class="ln">match goal!</span>';
     document.getElementById("camp-raised-inline").textContent = fmt(c.raised);
@@ -580,8 +580,8 @@
     document.getElementById("camp-matched").textContent = fmt(matched);
     document.getElementById("camp-total").textContent = fmt(c.raised + matched);
     document.getElementById("camp-possible").textContent = fmt(c.goal * 2);
-    document.getElementById("camp-pct").textContent = Math.round(pct) + "%";
-    document.getElementById("camp-pct-text").textContent = Math.round(pct) + "%";
+    document.getElementById("camp-pct").textContent = Math.floor(pct) + "%";
+    document.getElementById("camp-pct-text").textContent = Math.floor(pct) + "%";
     var arc = document.getElementById("camp-arc"), L = 2 * Math.PI * 40;
     var setArc = function (p) { arc.setAttribute("stroke-dasharray", (L * p / 100).toFixed(1) + " " + L.toFixed(1)); };
     document.getElementById("camp-goal").textContent = fmt(c.goal);
